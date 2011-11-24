@@ -1,0 +1,5 @@
+;!@Install@!UTF-8!
+Title="Eucaool 32bit Pre-requistes for 32 bit WindowsXP and above "
+BeginPrompt="Please leave everything default setting. Continue installation?"
+RunProgram="install.bat"
+;!@InstallEnd@!
