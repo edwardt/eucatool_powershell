@@ -13,12 +13,12 @@
 ## v2   - adds a ton of parsing to make the output pretty
 ##        added measuring the scripts involved in the command, (uses Tokenizer)
 ##############################################################################################################
-function Get-WebFile {
-   param( 
-      $url = (Read-Host "The URL to download"),
-      $fileName = $null,
-      [switch]$Passthru,
-      [switch]$quiet
+function get-webFile {
+  param( 
+     [string] $url,
+     [string] $fileName = $null,
+     [switch]$Passthru,
+     [switch]$quiet
    )
    
    $req = [System.Net.HttpWebRequest]::Create($url);
@@ -89,3 +89,9 @@ function Get-WebFile {
       ls $fileName
    }
 }
+    $download_url = "http://downloads.sourceforge.net/project/sevenzip/7-Zip/9.20/7z920.exe"
+	$fileName = "7z920.exe"
+	#$downloadUrl = "http://www.python.org/ftp/python/2.7.2/"
+	#$fileName = "python-2.7.2.msi"
+	
+Get-WebFile $downloadUrl $fileName $true $false
