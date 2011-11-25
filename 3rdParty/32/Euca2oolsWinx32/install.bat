@@ -1,4 +1,5 @@
 echo on
+echo "Going to kick off various installers will take a few moments ... "
 $P$_$+$G
 pushd .
 echo "Done building and installation Win32OpenSSL-0_9_8r"
@@ -57,10 +58,11 @@ popd
 
 pushd
 echo "Removing files no longer needed"
-rm -f Win32OpenSSL-0_9_8r.msi
-rm -f vcredist_x86.exe
-rm -f putty-0.61-installer.exe
-rm -f python-2.7.2.msi
-rm -f M2Crypto-0.20.2.win32-py2.7.exe
+del /f ./Win32OpenSSL-0_9_8r.msi
+del /f ./vcredist_x86.exe
+del /f ./putty-0.61-installer.exe
+del /f ./python-2.7.2.msi
+del /f ./M2Crypto-0.20.2.win32-py2.7.exe
 echo "Files removal Done"
 popd
+pause 5
